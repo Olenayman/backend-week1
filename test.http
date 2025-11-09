@@ -1,13 +1,7 @@
-### Get all the movies
+### Get all movies
 GET http://localhost:3000/movies
 
-### Getting a specific movie (e.g., ID 2)
-GET http://localhost:3000/movies/2
-
-### to get a movie that doesn't exist (to see the 404 error)
-GET http://localhost:3000/movies/99
-
-### to Add a new movie
+### Add a new movie
 POST http://localhost:3000/movies
 Content-Type: application/json
 
@@ -16,3 +10,22 @@ Content-Type: application/json
   "director": "Christopher Nolan",
   "year": 2008
 }
+
+### Get a single movie by ID
+GET http://localhost:3000/movies/2
+
+### Update an existing movie
+PUT http://localhost:3000/movies/3
+Content-Type: application/json
+
+{
+  "title": "Spirited Away",
+  "director": "Hayao Miyazaki",
+  "year": 2001
+}
+
+### Delete a movie
+DELETE http://localhost:3000/movies/1
+
+### Final check of all movies
+GET http://localhost:3000/movies
