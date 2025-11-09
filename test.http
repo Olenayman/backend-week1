@@ -1,0 +1,18 @@
+### Get all the movies
+GET http://localhost:3000/movies
+
+### Getting a specific movie (e.g., ID 2)
+GET http://localhost:3000/movies/2
+
+### to get a movie that doesn't exist (to see the 404 error)
+GET http://localhost:3000/movies/99
+
+### to Add a new movie
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Dark Knight",
+  "director": "Christopher Nolan",
+  "year": 2008
+}
