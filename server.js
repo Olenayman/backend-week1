@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+app.use(express.json());
 // This line is important! It allows our server to understand JSON data sent in requests.
 app.use(express.json());
 
